@@ -63,7 +63,7 @@
 			</fileset>
 		</copy>
 	
-		<javac includeantruntime="false" source="1.7" target="1.7" srcdir="build/src" destdir="build/classes" encoding="UTF-8">
+		<javac includeantruntime="false" source="1.8" target="1.8" srcdir="build/src" destdir="build/classes" encoding="UTF-8">
 			<classpath>
 				<fileset dir="build/libs">
 					<include name="*"/>
@@ -103,7 +103,7 @@
 		<fx:application id="fxApplication"
 			name="PINUtility"
 			mainClass="application.Main"
-			version="0.0.1"
+			version="0.0.3"
 		/>
 	
 		<mkdir dir="build/classes/META-INF" />
@@ -119,7 +119,7 @@
 			<manifest>
 				<attribute name="Implementation-Vendor" value="Ajitav Dutta"/>
 				<attribute name="Implementation-Title" value="PINUtility"/>
-				<attribute name="Implementation-Version" value="0.0.1"/>
+				<attribute name="Implementation-Version" value="0.0.3"/>
 				<attribute name="JavaFX-Feature-Proxy" value="None"/>
 			</manifest>
 		</fx:jar>

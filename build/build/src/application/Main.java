@@ -17,7 +17,7 @@ public class Main extends Application {
 			final Parent root = (Parent) loader.load();
 			final Scene scene = new Scene(root);
 			
-			scene.getStylesheets().add(getClass().getResource("skin/modena/modena.css").toExternalForm());
+			//scene.getStylesheets().add(getClass().getResource("skin/modena/modena.css").toExternalForm());
 			
 			primaryStage.setTitle("PIN Block/PIN Calculator");
 			primaryStage.setResizable(false);
