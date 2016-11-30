@@ -3,8 +3,8 @@
 	<target name="init-fx-tasks">
 		<path id="fxant">
 			<filelist>
-				<file name="C:\Program Files\Java\jdk1.7.0_13\lib\ant-javafx.jar"/>
-				<file name="C:\Program Files\Java\jdk1.7.0_13\lib\jfxrt.jar"/>
+				<file name="${java.home}\..\lib\ant-javafx.jar"/>
+				<file name="${java.home}\lib\jfxrt.jar"/>
 				<file name="${basedir}"/>
 			</filelist>
 		</path>
@@ -21,19 +21,19 @@
 		<mkdir dir="externalLibs" />
 	
 		<copy todir="externalLibs">
-			<fileset dir="C:\NotBackedUp\eclipse workspace\PINUtility\lib">
-				<filename name="commons-codec-1.10.jar"/>
+			<fileset dir="/Users/Ajitav/git/PINUtil/lib">
+				<filename name="commons-lang3-3.5.jar"/>
 			</fileset>
 		</copy>
 		<copy todir="externalLibs">
-			<fileset dir="C:\NotBackedUp\eclipse workspace\PINUtility\lib">
-				<filename name="commons-lang3-3.5.jar"/>
+			<fileset dir="/Users/Ajitav/git/PINUtil/lib">
+				<filename name="commons-codec-1.10.jar"/>
 			</fileset>
 		</copy>
 	
 		<mkdir dir="project" />
 		<copy todir="project">
-			<fileset dir="C:\NotBackedUp\eclipse workspace\PINUtility">
+			<fileset dir="/Users/Ajitav/git/PINUtil">
 				<include name="src/**" />
 			</fileset>
 		</copy>
@@ -63,14 +63,11 @@
 			</fileset>
 		</copy>
 	
-		<javac includeantruntime="false" source="1.7" target="1.7" srcdir="build/src" destdir="build/classes" encoding="Cp1252">
+		<javac includeantruntime="false" source="1.7" target="1.7" srcdir="build/src" destdir="build/classes" encoding="UTF-8">
 			<classpath>
 				<fileset dir="build/libs">
 					<include name="*"/>
 				</fileset>
-				<filelist>
-					<file name="C:\Program Files\Java\jdk1.7.0_13\jre\lib\jfxrt.jar"/>
-				</filelist>
 			</classpath>
 		</javac>
 	
@@ -100,12 +97,13 @@
 		<fx:resources id="appRes">
 			<fx:fileset dir="dist" includes="PINUtility.jar"/>
 			<fx:fileset dir="dist" includes="libs/*"/>
+			<fx:fileset dir="dist" includes="resources/**"/>
 		</fx:resources>
 	
 		<fx:application id="fxApplication"
 			name="PINUtility"
 			mainClass="application.Main"
-			version="1.0"
+			version="0.0.1"
 		/>
 	
 		<mkdir dir="build/classes/META-INF" />
@@ -119,9 +117,9 @@
 			<fx:resources refid="appRes"/>
 	
 			<manifest>
-				<attribute name="Implementation-Vendor" value="ANZ Switching Team"/>
+				<attribute name="Implementation-Vendor" value="Ajitav Dutta"/>
 				<attribute name="Implementation-Title" value="PINUtility"/>
-				<attribute name="Implementation-Version" value="1.0"/>
+				<attribute name="Implementation-Version" value="0.0.1"/>
 				<attribute name="JavaFX-Feature-Proxy" value="None"/>
 			</manifest>
 		</fx:jar>
@@ -138,8 +136,8 @@
 			outfile="PINUtility" nativeBundles="exe"
 			updatemode="background" >
 	
-			<fx:platform basedir="C:\Program Files\Java\jdk1.7.0_13"/>
-			<fx:info title="PINUtility" vendor="ANZ Switching Team"/>
+			<fx:platform basedir="${java.home}"/>
+			<fx:info title="PINUtility" vendor="Ajitav Dutta"/>
 	
 			<fx:application refId="fxApplication"/>
 			<fx:resources refid="appRes"/>
