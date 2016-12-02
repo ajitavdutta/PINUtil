@@ -133,7 +133,7 @@
 			includeDT="false"
 			offlineAllowed="true"
 			outdir="${basedir}/deploy"
-			outfile="PINUtility" nativeBundles="exe"
+			outfile="PINUtility" nativeBundles="all"
 			updatemode="background" >
 	
 			<fx:platform basedir="${java.home}"/>
