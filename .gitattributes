@@ -4,3 +4,4 @@
 =======
 *.rar filter=lfs diff=lfs merge=lfs -text
 >>>>>>> refs/remotes/origin/master
+*.rar filter=lfs diff=lfs merge=lfs -text
