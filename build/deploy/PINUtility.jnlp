@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="PINUtility.jar" size="18087" download="eager" />
+    <jar href="PINUtility.jar" size="18097" download="eager" />
     <jar href="libs\commons-codec-1.10.jar" size="284184" download="eager" />
     <jar href="libs\commons-lang3-3.5.jar" size="479881" download="eager" />
   </resources>
